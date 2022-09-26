@@ -1,0 +1,31 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/student
+    username: root
+    password: 1234
+  flyway:
+    enabled: true
+    url: jdbc:mysql://localhost:3306/student
+    user: root
+    password: 1234
+    baseline-on-migrate: true
+
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      ddl-auto: update
+  security:
+    oauth2:
+      client:
+        registration:
+          github:
+            client-id: 9114fab90a449bbcf2f6
+            client-secret: 24ba7ef9f1772ee4eea49488c3bc7633bf4c8b57
+          google:
+            client-id: 958861662116-udh2tv0vu79buttc3ejt5iun9bjk10tj.apps.googleusercontent.com
+            client-secret: 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
+            scope:
+              - email
+              - profile
